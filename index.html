@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Calculation Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #282828;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        @keyframes wave {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes rainbow-text {
+            0% { color: #f00; }
+            16% { color: #ff0; }
+            33% { color: #0f0; }
+            50% { color: #0ff; }
+            66% { color: #00f; }
+            83% { color: #f0f; }
+            100% { color: #f00; }
+        }
+        .bouncing-char {
+            display: inline-block;
+            animation: wave 1s ease-in-out infinite alternate, rainbow-text 4s linear infinite;
+        }
+        
+        /* Slide animations for numbers */
+        @keyframes slide-up-anim {
+            0% { transform: translateY(10%); opacity: 0.8; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slide-down-anim {
+            0% { transform: translateY(-10%); opacity: 0.8; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-up {
+            animation: slide-up-anim 0.2s ease-out forwards;
+        }
+        .animate-slide-down {
+            animation: slide-down-anim 0.2s ease-out forwards;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

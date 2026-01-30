@@ -1,0 +1,5 @@
+{
+  "name": "Pool Calculation Game (Host & Remote)",
+  "description": "A collaborative pool calculation game where a host can share a room code for others to join as remote controllers. When a remote connects, the host's controls hide, moving the UI to the remote device.",
+  "requestFramePermissions": []
+}
